@@ -1,0 +1,6 @@
+- unless @news.empty?
+  - @news.each do |_news|
+    == link_to _news.title
+- else
+  div.placeholder
+    | "敬请期待...(+_+)..."

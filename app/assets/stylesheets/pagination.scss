@@ -1,0 +1,26 @@
+.pagination {
+  text-align: center;
+  padding-top: 30px;
+  .prev, .next {
+    color: #000;
+    display: inline-block;
+    margin: 0 4px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border-bottom: 4px solid rgba(13, 140, 126, 0.63);
+    font-size: 14px;
+    background-color: rgba(13, 140, 126, 0.63);
+    a {
+      line-height: 15px;
+    }
+  }
+  .prev:hover, .next:hover {
+    transition: color 0.36s ease, background-color 0.36s ease;
+    color: #FFF;
+    background-color: rgba(7, 8, 8, 0.68);
+    border-bottom: 4px solid #000;
+    a {
+      color: #FFF;
+    }
+  }
+}

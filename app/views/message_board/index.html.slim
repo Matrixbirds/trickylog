@@ -1,0 +1,9 @@
+header.message-header
+
+.message-board-content
+
+  - @messages.each do |_message|
+    div id=_message.id class='message'
+      img src='http://tp1.sinaimg.cn/2885763952/180/40055649212/1'
+      h3 = _message.user_name
+      p = _message.content

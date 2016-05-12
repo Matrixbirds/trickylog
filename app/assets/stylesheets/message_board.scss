@@ -1,0 +1,33 @@
+// Place all the styles related to the messages_board controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-board-content {
+  overflow-y: scroll;
+  min-width: 500px;
+  max-height: 700px;
+  width: 100%;
+}
+
+
+.message {
+  height: 180px;
+  width: 100%;
+}
+
+.message > img {
+  float: left;
+  width: 58px;
+  height: 58px;
+}
+
+.message > h3 {
+  margin: 0 0px;
+  position: relative;
+  left: 5%;
+  top: 15%;
+}
+
+.message > p {
+  margin: 0 0px;
+}

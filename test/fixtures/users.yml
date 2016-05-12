@@ -1,0 +1,23 @@
+# == Schema Information
+# Schema version: 20160310132348
+#
+# Table name: users
+#
+#  id               :uuid             not null, primary key
+#  name             :string           not null
+#  encrypted_passwd :string           not null
+#  gender           :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  status           :integer          default(0), not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  encrypted_password: MyString
+
+two:
+  name: MyString
+  encrypted_password: MyString

@@ -1,0 +1,12 @@
+#panel
+  .login_panel
+  .login_tnt
+
+
+  = form_for @session, as: :session, url: login_path, method: :post do |f|
+    - @session.errors.any?
+     - @session.errors.full_messages.each do |msg|
+        = msg
+    = f.text_field :username
+    = f.password_field :password
+    = f.submit

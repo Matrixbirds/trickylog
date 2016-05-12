@@ -1,0 +1,205 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  width: 100%;
+}
+
+.main-container {
+  background: asset-url("background-image.png") repeat repeat;
+  height: 100%;
+  color: #333;
+  font-family: sans-serif, verdana, arial, helvetica;
+  font-size: 13px;
+  line-height: 18px;
+  width: 100%;
+}
+
+#navigation {
+  top: 0px;
+  width: 100%;
+  height: 215px;
+  position: absolute;
+}
+
+.navigation_bar {
+  width: 100%;
+  height: 214px;
+  // background-color: #A79F62;
+  background-blend-mode: multiply;
+  .navigation {
+    width: 100%;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0 auto;
+    &:hover {
+      box-shadow: rgb(11, 7, 0) 2px 1px 4px;
+    }
+    // display: block;
+    // box-shadow: 0px 4px 2px -2px #333;
+    @media only screen and (max-width: 531px) {
+      top: 0px;
+      display: none;
+    }
+    li {
+      display: inline-block;
+      a {
+        padding: 6px 8px;
+        display: inline-block;
+        border-radius: 3px;
+      }
+    }
+    li.selected {
+      a {
+        color: #fff;
+        background-color: #333;
+      }
+    }
+    li:after {
+      content: "|";
+      margin: auto 0px;
+    }
+    li:last-child:after {
+      content: '';
+    }
+  }
+}
+
+a.profile-avatar-wrapper {
+  display: inline-block;
+  height: 85px;
+  padding: 3px 3px;
+  &:hover {
+    background-color: rgba(155, 13, 191, 0.42);
+    text-decoration: none;
+    border-radius: 66px;
+    border-color: #fff;
+  }
+  .avatar {
+    width: 85px;
+    border-radius: 55px;
+  }
+}
+
+.navigation {
+  a {
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+
+.profile {
+  text-align: center;
+  width: 100%;
+}
+.profile > * {
+  position: relative;
+}
+
+.container {
+  margin: auto 33%;
+  padding: 2% 0;
+}
+
+.article-container {
+  padding: auto 10px;
+  box-shadow: rgba(31, 33, 33, 0.62) 0px 1px 10px;
+  h2 > a:hover{
+    border-bottom: 2px solid rgba(13, 140, 126, 0.63);
+  }
+  & {
+    padding: 5px 20px;
+    margin: 0px 5px 15px 5px;
+    .content {
+      white-space: pre-line;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 300px;
+      min-height: 50px;
+    }
+  }
+}
+
+.timestamp {
+  color: #7f8c8d;
+}
+
+.tag {
+  & > a {
+    display: inline-block;
+  }
+}
+
+.provider {
+  font-family: serif;
+  font-style: oblique;
+  font-weight: 900;
+  color: #333;
+}
+
+.description {
+  margin: 2em 0;
+  padding-left: 20px;
+  border-left: 4px solid #42b983;
+}
+
+.ended {
+  text-align: center;
+  border-top: 3px solid #333;
+  background: #f5f5f5;
+  color: #333;
+  & {
+    h8 {
+      font-size: 13px;
+      font-style: oblique;
+      font-weight: bold;
+    }
+  }
+}
+
+.footer-thumbnail {
+  text-align: center;
+}
+
+.placeholder {
+  min-height: 350px;
+  line-height: 350px;
+  font-size: 70px;
+  font-style: oblique;
+  text-align: center;
+}
+
+.trick_log {
+  p {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  code, pre {
+    font-size: 0.8em;
+    background-color: rgba(216, 208, 208, 0.34);
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+    box-shadow: 0px 0px 1px 0px #333;
+  }
+  code {
+    margin: 0 2px;
+    padding: 3px 5px;
+    color: #e96900;
+    border-radius: 2px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

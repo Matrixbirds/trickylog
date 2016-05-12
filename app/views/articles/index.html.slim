@@ -1,0 +1,19 @@
+- @articles.each do |_article|
+  .article-container
+    header
+      = _article.decorate.title
+      div.timestamp
+        = _article.decorate.created_at
+      / div.tag
+        / a
+          / h4 生活
+        / a
+          / h4 代码
+        / a
+          / h4 瞎扯
+      div.description
+        h3 = _article.subtitle
+    a
+      =_article.decorate.content_truncated
+
+= paginate @articles

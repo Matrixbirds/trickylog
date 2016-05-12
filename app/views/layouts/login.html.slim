@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title 登陆肮脏的后台
+  = csrf_meta_tags
+  = stylesheet_link_tag \
+    'signin', media: 'all',
+    'data-turbolinks-track' => true
+  body
+    = yield

@@ -1,0 +1,34 @@
+div id="#{object.slug}" class='trick_log'
+= javascript_include_tag \
+  'remarkable.min',
+  'data-turbolinks-track' => true
+= javascript_include_tag \
+  'highlight.pack',
+  'data-turbolinks-track' => true
+= stylesheet_link_tag \
+  'railscasts', media: 'all',
+  'data-turbolinks-track' => true
+javascript:
+  var md = new Remarkable({
+    html:   false,
+    xhtmlOut: false,
+    breaks: false,
+    langPrefix: 'language-',
+    linkify:  false,
+    typographer: true,
+    quotes: '',
+    highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(lang, str).value;
+          } catch (err) {}
+        }
+
+        try {
+          return hljs.highlightAuto(str).value;
+        } catch (err) {}
+
+        return ''; // use external default escaping
+      }
+  });
+  document.getElementById("#{object.slug}").innerHTML = md.render("#{j object.content.chomp}");

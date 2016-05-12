@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Craft4Tricky
+  = csrf_meta_tags
+
+  body.main-container
+    = render 'layouts/navigation_bar'
+    .wrapper
+      section.container
+        = yield
+    = render 'layouts/footer'
+
+  = stylesheet_link_tag \
+    'application', media: 'all',
+    'data-turbolinks-track' => true
+  = javascript_include_tag \
+    'application',
+    'data-turbolinks-track' => true

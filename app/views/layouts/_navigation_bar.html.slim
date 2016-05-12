@@ -1,0 +1,21 @@
+nav.navigation_bar
+    #navigation
+    .profile
+      a class="profile-avatar-wrapper" href='#'
+        img class='avatar' src='http://tp1.sinaimg.cn/2885763952/180/40055649212/1'
+      h1 Matrixbirds
+      h4 Record Every Dirty Day
+      ul.navigation
+          li class= currented_page(root_url)
+            == link_to t("root_url"), root_url
+          /li class= currented_page(message_board_path)
+            /== link_to t("message_board"), message_board_path
+          li class= currented_page(picture_path)
+            == link_to t("picture"), picture_path
+          li class= currented_page(weekly_path)
+            == link_to t("weekly"), weekly_path
+          / li class= currented_page(hackathon_path)
+            / == link_to t("labstar_hackathon"), hackathon_path
+          li
+            == link_to "https://github.com/Matrixbirds?tab=activity" do
+              == fa_icon "github-alt", right: true
