@@ -20,6 +20,7 @@
 .byebug_history
 config/secrets.yml
 config/database.yml
+config/newrelic.yml
 .env
 coverage/
 /vagrant/Vagrantfile

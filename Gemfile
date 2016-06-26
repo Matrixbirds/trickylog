@@ -70,6 +70,10 @@ gem 'kaminari'
 gem 'redcarpet'
 gem 'coderay'
 
+# monitor
+gem 'newrelic_rpm'
+
+
 group :development do
   gem 'annotate'
   gem 'capistrano'
